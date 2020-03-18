@@ -5,38 +5,52 @@
     <title>Attestation de déplacement</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="header">
+        <a href="https://simplon-charleville.fr/" target="_blank"><img src="img/logo_simplon_charleville-mezieres.png" alt="simplon charleville mezieres"></a>
+    </div>
 
     <div id='page'>
 
-        <center>
-            <h1>ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h1>
-        </center>
-
-        <p>En application de l'article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le
-            cadre de la lutte contre la propagation du virus Covid-19 :</p>
-
-
         <form>
-            <p><b>Je soussigné(e)</b></p>
-            <br />
-            <label class="lbl" for="name"><b>Mme / M.</b></label>
-            <input id="name" type="text"><br />
+            <div class="title">
+                <h1>ATTESTATION DE DÉPLACEMENT DÉROGATOIRE</h1>
+                <hr><br>
+    
+                <p>En application de l'article 1er du décret du 16 mars 2020 portant réglementation des déplacements dans le
+                    cadre de la lutte contre la propagation du virus Covid-19 :</p>
+            </div>
 
-            <label class="lbl" for="born"><b>Né(e) le :</b></label>
-            <input id="born" type="date"><br />
+            <div class="soussigne">
+                <p><strong>Je soussigné(e) :</strong></p>
 
-            <label class="lbl" for="address"><b>Demeurant :</b></label>
-            <input id="address" type="text"><br />
+                <ul>
+                    <li>
+                        <label class="lbl" for="name">Mme / M.</label>
+                        <input id="name" type="text"><br>
+                    </li>
+                    <li>
+                        <label class="lbl" for="born">Né(e) le :</label>
+                        <input id="born" type="date"><br>
+                    </li>
+                    <li>
+                        <label class="lbl" for="address">Demeurant :</label>
+                        <input id="address" type="text"><br>
+                    </li>
+                </ul>
+            </div>
 
-            <br />
-            <p>certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par l'article 1er du
-                décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la
-                propagation du virus Covid-19:</p>
-            <br />
+            <div class="certifie">
+                <p>certifie que mon déplacement est lié au motif suivant (cocher la case) autorisé par l'article 1er du
+                    décret du 16 mars 2020 portant réglementation des déplacements dans le cadre de la lutte contre la
+                    propagation du virus Covid-19:</p>
+            </div>
+            
+            <div class="radio">
             <p>
                 <input id="choix_a" type="radio" name="choix">
                 <label for="choix_a" id="label_choix_a">déplacements entre le domicile et le lieu d'exercice de
@@ -68,26 +82,44 @@
                     physique individuelle des personnes, à l'exclusion de toute pratique sportive collective, et aux
                     besoins des animaux de compagnie.</label>
             </p>
+            </div>
 
-            <p align="right">
-                <label for="place">Fait à </label><input type="text" id="place">
-                <label for="date">&nbsp;le </label><input type="date" id="date"><br>
-                (signature)<br /><br />
-                <canvas style="border: 1px solid #999" id="signature" width="600" height="200"></canvas><br />
-                <button onclick="can_clear();" id="clear_btn">Effacer</button>
+            <div class="faita">
+                <label for="place">Fait à </label>
+                <input type="text" id="place">
 
-            </p>
+                <label for="date">&nbsp;le </label>
+                <input type="date" id="date"><br>
+            </div>
 
+            <div class="button">
+                <div class="canvas">
+                    <p>(signature)</p>
+                    <canvas style="border: 1px solid #999" id="signature" width="600" height="200"></canvas>
+                    <br>
+                    <button onclick="can_clear();" id="clear_btn">Effacer</button>
+                </div>
+                <div class="btm1">
+                    <button onclick="render();" id="render_btn">Génerer</button>
+                    <button onclick="window.location.reload();" id="reset_btn">Remise à zéro</button>
+                </div>
+            </div>
         </form>
-
-        <center><button onclick="render();" id="render_btn">Génerer</button></center><br />
-        <center><button onclick="window.location.reload();" id="reset_btn">Remise à zéro</button></center>
 
     </div>
 
-    <center>
-        <footer>Conforme RGPD, certifié sans stockage et sans cookies. code modifier par Christophe SAIDOUN-DEFOSSE, Simplon Charleville-Mézières</footer>
-    </center>
+    
+    <footer>
+        <div class="logo">
+            <a href="https://www.charleville-mezieres.fr/" target="_blank"><img src="img/logo_charlevillle-mezieres.gif" alt="charleville mezieres"></a>
+            <a href="https://simplon-charleville.fr/" target="_blank"><img src="img/logo_simplon_charleville-mezieres2.png" alt="simplon charleville mezieres"></a>
+            
+        </div>
+        <p>Conforme RGPD, certifié sans stockage et sans cookies. 
+        <br>Code modifier par Christophe SAIDOUN-DEFOSSE, Simplon Charleville-Mézières</p>
+        
+    </footer>
+    
     
     <script type="text/javascript" src="script.js"></script>
 
