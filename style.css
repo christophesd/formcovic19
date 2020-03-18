@@ -133,6 +133,10 @@ img {
 
 
 @media screen and (max-width : 640px) {
+    h1 {
+        font-size: 1em;
+    }
+
     html {
         font-size: 200%;
     }
